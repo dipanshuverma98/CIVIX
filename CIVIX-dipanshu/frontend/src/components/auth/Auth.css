@@ -1,0 +1,215 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --text-color: #1f2937;
+  --subtle-text: #6b7280;
+  --bg-light: #f9fafb;
+  --border: #d1d5db;
+  --error: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-color);
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  padding: 1rem;
+  padding-top: 60px; /* Adjusted for the back button */
+}
+
+.auth-card {
+  background: white;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.auth-card h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark);
+}
+
+.auth-subtitle {
+  font-size: 1rem;
+  color: var(--subtle-text);
+  margin-bottom: 1.5rem;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: var(--error);
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.auth-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  position: relative;
+}
+
+.input-icon:focus-within {
+  border-color: var(--primary);
+}
+
+.input-icon svg {
+  margin-right: 0.75rem;
+  color: var(--subtle-text);
+  font-size: 1.1rem;
+}
+
+.input-icon input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--text-color);
+  padding-right: 2.5rem; /* Add space for the toggle button */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+  color: var(--primary-color);
+}
+
+.password-toggle:focus {
+  outline: none;
+}
+
+.auth-button {
+  width: 100%;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.85rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--subtle-text);
+}
+
+.auth-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link:hover {
+  color: var(--primary-dark);
+}
+
+/* Add these styles for the back button */
+.goback {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid var(--primary-color, #2563eb);
+  color: var(--primary-color, #2563eb);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.goback:hover {
+  background: var(--primary-color, #2563eb);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* New styles for the back-home button */
+.back-home {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-home:hover {
+  background: #2563eb;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

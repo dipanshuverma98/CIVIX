@@ -1,0 +1,207 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #f9f9fb;
+  color: #333;
+}
+
+/* Container */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+.landing-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.nav-buttons button {
+  margin-left: 1rem;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 2rem;
+  background-color: #f1f5f9;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1e293b;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Call to Action Section */
+.cta {
+  padding: 4rem 2rem;
+  background-color: #2563eb;
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+.landing-footer {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background-color: #1e293b;
+  color: white;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.landing-container .btn-primary,
+.landing-container .btn-secondary,
+.landing-container .btn-outline {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.landing-container .btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.landing-container .btn-primary:hover {
+  background-color: #1e40af;
+}
+
+.landing-container .btn-secondary {
+  background-color: white;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.landing-container .btn-secondary:hover {
+  background-color: #e0e7ff;
+}
+
+.landing-container .btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.landing-container .btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.footer-heading {
+  color: black;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .nav-buttons button {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

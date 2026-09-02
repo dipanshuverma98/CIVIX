@@ -1,0 +1,203 @@
+/* --- Logout Button (Top Right) --- */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  color: #65676b; /* Neutral grey */
+  border: 1px solid #e4e6eb;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: auto; /* Pushes it to the right if in a flex container */
+}
+
+.logout-btn:hover {
+  background-color: #fee2e2;
+  color: #dc2626; /* Red on hover */
+  border-color: #fee2e2;
+}
+
+.logout-btn svg {
+  font-size: 0.9rem;
+}
+
+/* --- Bio Section & Edit Pencil --- */
+.bio-container {
+  display: flex;
+  flex-direction: column; /* Stack text and pencil like the screenshot */
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.edit-bio-btn {
+  background: none;
+  border: none;
+  color: #65676b;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.edit-bio-btn:hover {
+  color: #0084ff; /* Blue on hover */
+  background-color: #f0f2f5;
+}
+
+/* --- Avatar Camera Icon (Bottom Right of Avatar) --- */
+.avatar-wrapper {
+  position: relative; /* Essential for absolute positioning of camera icon */
+  width: 120px;
+  height: 120px;
+}
+
+.avatar-edit-btn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: #e4e6eb;
+  color: #050505;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid #fff; /* White ring to separate from avatar */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: background 0.2s;
+  font-size: 1rem;
+}
+
+.avatar-edit-btn:hover {
+  background-color: #d8dadf;
+}
+
+/* --- Issue Card & Re-report Button --- */
+/* Ensure the card footer aligns items properly */
+.item-card .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #f0f2f5; /* Subtle separator line */
+  margin-top: 12px;
+}
+
+/* The Re-report button style matching the screenshot box style */
+.rereport-btn {
+  background-color: transparent;
+  color: #65676b;
+  border: 1px solid #ced0d4;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rereport-btn:hover {
+  background-color: #f0f2f5;
+  color: #050505;
+  border-color: #a0a3a8;
+}
+
+/* Optional: Tweaks to match the white card screenshot exactly */
+.item-card {
+  border: 1px solid #e4e6eb; /* Crisper border like screenshot */
+  box-shadow: none; /* Flatter look */
+}
+
+.item-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle lift on hover */
+}
+
+/* ...existing code... */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.modal-card p {
+  margin: 0 0 16px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.rereport-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 16px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #545b62;
+}

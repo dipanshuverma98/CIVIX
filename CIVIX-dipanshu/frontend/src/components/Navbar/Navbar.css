@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Matching variables from Dashboard for consistency */
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --bg-color: #f3f4f6;
+  --nav-bg: rgba(255, 255, 255, 0.85); /* Semi-transparent */
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* --- Main Navbar Container --- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 70px;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(12px); /* Glass effect */
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Brand / Logo --- */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.navbar-brand:hover {
+  opacity: 0.8;
+}
+
+/* Optional: Add a colored accent to the brand name */
+.navbar-brand::before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
+
+/* --- Navigation Links --- */
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 99px; /* Pill shape */
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link svg {
+  font-size: 1.1rem;
+}
+
+/* Hover State */
+.nav-link:hover {
+  color: var(--text-primary);
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Active State */
+.nav-link.active {
+  color: #fff;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+}
+
+.nav-link.active:hover {
+  background-color: var(--primary-hover);
+}
+
+/* --- User Profile & Actions --- */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Shared styles for Bell and User buttons */
+.notification-button,
+.profile-button {
+  background: white;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1rem;
+}
+
+.notification-button:hover,
+.profile-button:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.notification-button:active,
+.profile-button:active {
+  transform: translateY(0);
+}
+
+/* Optional: Add a red dot to notification if needed later */
+.notification-button {
+  position: relative;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  /* Hide text labels on tablet/mobile to save space */
+  .nav-link span,
+  .nav-link {
+    /* If the text is directly inside, we might need to target the text node. 
+       Since React code has <FaIcon /> Text, we hide the text by font-size 0 
+       or simpler: just hide the text label logic if possible. 
+       Here is a CSS trick to hide text but keep icon: */
+    font-size: 0; 
+    padding: 0.75rem; /* Make it square-ish */
+    gap: 0;
+  }
+
+  /* Reset font size for the icon itself */
+  .nav-link svg {
+    font-size: 1.25rem;
+  }
+  
+  /* Adjust Brand Size */
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .nav-links {
+    gap: 0.25rem;
+  }
+  
+  .user-profile {
+    gap: 0.5rem;
+  }
+  
+  .notification-button,
+  .profile-button {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* On very small screens, reduce brand visibility or spacing further if needed */
+  .navbar-brand span {
+    display: none; /* If brand had a span. Currently it's text node. */
+  }
+  
+  /* Alternatively, hide brand text visually but keep the icon/before element */
+  .navbar-brand {
+    font-size: 0; 
+  }
+  .navbar-brand::before {
+    width: 20px;
+    height: 20px;
+  }
+}

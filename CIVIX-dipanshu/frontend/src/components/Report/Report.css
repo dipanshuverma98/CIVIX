@@ -1,0 +1,245 @@
+.report-page {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.report-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 2rem 2rem;
+}
+
+.report-page-content {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.report-page-title {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.report-page-subtitle {
+  color: #64748b;
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+}
+
+.report-page-section {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.report-section-title {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.report-input-group {
+  margin-bottom: 1.5rem;
+}
+
+.report-input-group label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.report-input-group input,
+.report-input-group textarea {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.report-input-group input:focus,
+.report-input-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.report-location-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.report-map-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.25rem;
+  background: white;
+  border: 2px solid #2563eb;
+  border-radius: 8px;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.report-map-toggle:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.report-map-wrapper {
+  margin-top: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 400px;
+}
+
+.report-file-input {
+  margin-bottom: 0.5rem;
+}
+
+.report-helper-text {
+  display: block;
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.report-image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.report-preview-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.report-error {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.report-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.report-submit {
+  padding: 0.875rem 2.5rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.report-submit:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.report-submit:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .report-page-container {
+    padding: 100px 1rem 1rem;
+  }
+
+  .report-page-content {
+    padding: 1.5rem;
+  }
+
+  .report-location-wrapper {
+    flex-direction: column;
+  }
+
+  .report-map-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =========================================
+   GLOBAL SELECT (DROPDOWN) STYLING
+========================================= */
+
+select {
+  /* Sizing & Spacing */
+  width: 100%;
+  padding: 0.6rem 2.5rem 0.6rem 0.75rem; /* Extra padding on the right for the arrow */
+  font-size: 0.9rem;
+  font-family: inherit;
+  
+  /* Colors & Borders */
+  color: #111827;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  
+  /* Remove default browser styling */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  /* Custom SVG Arrow */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%239ca3af%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.65rem auto;
+}
+
+/* Hover effect */
+select:hover {
+  border-color: #9ca3af;
+}
+
+/* Focus effect (when clicked) */
+select:focus {
+  border-color: #4f46e5; /* Indigo highlight */
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1); /* Soft glow ring */
+}
+
+/* Makes the default placeholder text (e.g. "Select an option") grey.
+  This works as long as your placeholder <option> has value=""
+*/
+select:invalid,
+select option[value=""] {
+  color: #9ca3af;
+}
+
+/* Ensure standard options are dark */
+select option {
+  color: #111827;
+}
+
+/* Optional: Disabled state */
+select:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
