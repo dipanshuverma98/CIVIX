@@ -290,7 +290,7 @@ const AdminDashboard = () => {
                 <option value="Parks & Trees">Parks & Trees</option>
                 <option value="Pollution Control">Pollution Control</option>
                 <option value="Public Safety">Public Safety</option>
-                <option value="Building & Construction">
+                <option value="Buildings & Construction">
                   Building & Construction
                 </option>
                 <option value="Others">Others</option>
